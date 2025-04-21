@@ -10,6 +10,9 @@ COPY . /app
 # Instalar las dependencias necesarias
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Instalar Rasa si no está en el requirements.txt
+RUN pip install rasa==2.8.0
+
 # Entrenamos el modelo de Rasa durante la construcción del contenedor
 RUN rasa train
 
@@ -17,4 +20,5 @@ RUN rasa train
 EXPOSE 5005
 
 ENTRYPOINT ["rasa"]
+
 CMD ["run", "--cors", "*", "--enable-api", "--model", "./models", "--debug"]
