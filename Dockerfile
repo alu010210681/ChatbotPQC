@@ -11,4 +11,5 @@ COPY . /app
 EXPOSE 5005
 
 # Paso 6: Iniciar el servidor Rasa
-CMD ["rasa", "run", "--cors", "*", "--enable-api", "--debug"]
+ENTRYPOINT ["rasa"]
+CMD ["run", "--cors", "*", "--enable-api", "--debug"]
