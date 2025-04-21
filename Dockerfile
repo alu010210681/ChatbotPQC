@@ -21,4 +21,4 @@ EXPOSE 5005
 
 ENTRYPOINT ["rasa"]
 
-CMD ["run", "--cors", "*", "--enable-api", "--model", "./models", "--debug"]
+CMD ["run", "--cors", "*", "--enable-api", "--model", "./models", "--port", "5005", "--debug"]
