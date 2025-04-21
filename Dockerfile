@@ -8,14 +8,10 @@ WORKDIR /app
 COPY . /app
 
 # Paso 4: Instalar las dependencias necesarias
-RUN pip install --upgrade pip && \
-    pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Paso 5: Entrenar el modelo (opcional si ya tienes un modelo entrenado)
-# RUN rasa train
-
-# Paso 6: Exponer el puerto que Rasa usará (default 5005)
+# Paso 5: Exponer el puerto
 EXPOSE 5005
 
-# Paso 7: Iniciar el servidor Rasa
+# Paso 6: Iniciar el servidor Rasa
 CMD ["rasa", "run", "--cors", "*", "--enable-api", "--debug"]
