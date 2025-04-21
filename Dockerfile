@@ -8,6 +8,7 @@ WORKDIR /app
 COPY . /app
 
 # Paso 5: Exponer el puerto
+ENV PORT=5005
 EXPOSE 5005
 
 # Instalar Rasa si no está en el requirements.txt
