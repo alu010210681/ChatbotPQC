@@ -7,9 +7,6 @@ WORKDIR /app
 # Paso 3: Copiar los archivos del proyecto Rasa
 COPY . /app
 
-# Paso 4: Instalar las dependencias necesarias
-RUN pip install --no-cache-dir -r requirements.txt
-
 # Paso 5: Exponer el puerto
 EXPOSE 5005
 
