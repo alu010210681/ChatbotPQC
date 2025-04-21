@@ -36,7 +36,7 @@ coloredlogs==15.0.1
 colorhash==1.2.1
 comm==0.2.2
 confluent-kafka==2.10.0
-contourpy==1.2.0
+contourpy==1.1.1
 cryptography==44.0.2
 cycler==0.12.1
 dask==2022.10.2
