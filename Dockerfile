@@ -7,6 +7,8 @@ WORKDIR /app
 # Paso 3: Copiar los archivos del proyecto Rasa
 COPY . /app
 
+RUN pip install rasa
+RUN rasa train
 # Paso 6: Exponer el puerto que Rasa usará (default 5005)
 EXPOSE 5005
 
