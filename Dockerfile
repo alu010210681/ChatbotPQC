@@ -1,5 +1,5 @@
 # Paso 1: Usar una imagen base oficial de Rasa
-FROM rasa/rasa:2.8.0-full
+FROM python:3.10-slim
 
 # Paso 2: Establecer el directorio de trabajo
 WORKDIR /app
