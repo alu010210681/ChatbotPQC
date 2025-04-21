@@ -1,0 +1,16 @@
+version: "3.1"
+rules:
+  - rule: Saludo inicial
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Despedida
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Pedir ayuda
+    steps:
+      - intent: help
+      - action: utter_help

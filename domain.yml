@@ -1,0 +1,60 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - help
+  - guide_usage
+  - explain_crypto
+  - explain_ml_dsa
+  - explain_ml_kem
+
+responses:
+  utter_greet:
+    - text: "¡Hola! Soy tu asistente. ¿Te gustaría aprender a usar la app o conocer sobre criptografía post-cuántica?"
+
+  utter_goodbye:
+    - text: "¡Hasta luego! Si necesitas ayuda, aquí estaré."
+
+  utter_help:
+    - text: "Puedo ayudarte a entender cómo usar la app o explicarte conceptos de criptografía post-cuántica."
+
+  utter_guide_usage:
+    - text: |
+        Estas son las funcionalidades principales de la app:
+        1. Registro e inicio de sesión con JWT
+        2. Mensajería cifrada con ML-KEM
+        3. Firma digital con ML-DSA
+        4. Chat en tiempo real con Socket.io
+        5. UI intuitiva en React
+        6. Seguridad mejorada con TLS
+        7. Chatbot educativo y búsqueda de usuarios
+        8. Compartir archivos y encuestas
+        9. Reacciones con emojis y resumen de conversaciones
+        10. Autenticación facial y verificación con QR
+
+  utter_explain_crypto:
+    - text: |
+        La criptografía post-cuántica se basa en problemas difíciles incluso para las computadoras cuánticas.
+        Algunos conceptos importantes:
+        - Retículos: estructuras usadas como base de seguridad
+        - LWE: aprendizaje con errores, base para ML-KEM
+        - SVP: problema del vector más corto
+
+  utter_explain_ml_dsa:
+    - text: |
+        ML-DSA es un esquema de firma digital seguro contra ataques cuánticos.
+        - Usa retículos y LWE-Module
+        - Permite firmar mensajes y verificar su autenticidad
+        - Genera claves, firma y verifica como RSA pero más resistente
+
+  utter_explain_ml_kem:
+    - text: |
+        ML-KEM es un mecanismo de encapsulación de claves post-cuántico.
+        - Permite cifrar un mensaje usando una clave pública
+        - El receptor lo descifra usando su clave privada
+        - Basado en estructuras de retículos y el problema LWE
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,42 @@
+version: "3.1"
+nlu:
+  - intent: greet
+    examples: |
+      - Hola
+      - Buenas
+      - Hey
+      - Qué tal
+
+  - intent: goodbye
+    examples: |
+      - Adiós
+      - Hasta luego
+      - Nos vemos
+
+  - intent: help
+    examples: |
+      - ¿Qué puedes hacer?
+      - Ayuda
+      - Necesito asistencia
+
+  - intent: guide_usage
+    examples: |
+      - ¿Cómo uso la app?
+      - ¿Qué funciones tiene la app?
+      - Guíame por la app
+
+  - intent: explain_crypto
+    examples: |
+      - ¿Qué es la criptografía post-cuántica?
+      - Explícame sobre retículos y LWE
+      - Cuéntame sobre seguridad post-cuántica
+
+  - intent: explain_ml_dsa
+    examples: |
+      - ¿Qué es ML-DSA?
+      - ¿Cómo funciona la firma digital?
+
+  - intent: explain_ml_kem
+    examples: |
+      - ¿Qué es ML-KEM?
+      - ¿Cómo se cifran los mensajes en la app?

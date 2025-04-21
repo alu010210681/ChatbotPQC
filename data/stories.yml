@@ -1,0 +1,36 @@
+version: "3.1"
+stories:
+  - story: flujo de bienvenida y ayuda
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - story: flujo de ayuda general
+    steps:
+      - intent: help
+      - action: utter_help
+
+  - story: guiar sobre uso de la app
+    steps:
+      - intent: guide_usage
+      - action: utter_guide_usage
+
+  - story: explicar criptografía post-cuántica
+    steps:
+      - intent: explain_crypto
+      - action: utter_explain_crypto
+
+  - story: explicar ML-DSA
+    steps:
+      - intent: explain_ml_dsa
+      - action: utter_explain_ml_dsa
+
+  - story: explicar ML-KEM
+    steps:
+      - intent: explain_ml_kem
+      - action: utter_explain_ml_kem
+
+  - story: despedida
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye

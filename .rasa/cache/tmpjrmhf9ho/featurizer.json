@@ -1,0 +1,50 @@
+{
+  "type": "IntentMaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "back": 0,
+        "explain_crypto": 1,
+        "explain_ml_dsa": 2,
+        "explain_ml_kem": 3,
+        "goodbye": 4,
+        "greet": 5,
+        "guide_usage": 6,
+        "help": 7,
+        "nlu_fallback": 8,
+        "out_of_scope": 9,
+        "restart": 10,
+        "session_start": 11
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "utter_explain_crypto": 13,
+        "utter_explain_ml_dsa": 14,
+        "utter_explain_ml_kem": 15,
+        "utter_goodbye": 16,
+        "utter_greet": 17,
+        "utter_guide_usage": 18,
+        "utter_help": 19
+      },
+      "entities": {},
+      "slots": {},
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}
