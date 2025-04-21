@@ -11,7 +11,7 @@ COPY . /app
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Instalar Rasa si no está en el requirements.txt
-RUN pip install rasa==2.8.0
+RUN pip install rasa
 
 # Entrenamos el modelo de Rasa durante la construcción del contenedor
 RUN rasa train
