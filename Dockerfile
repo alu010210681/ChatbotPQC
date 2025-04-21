@@ -12,4 +12,4 @@ EXPOSE 5005
 
 # Paso 6: Iniciar el servidor Rasa
 ENTRYPOINT ["rasa"]
-CMD ["run", "--cors", "*", "--enable-api", "--model", ".models/20250421-175358-dark-petrel.tar.gz", "--debug"]
+CMD ["run", "--cors", "*", "--enable-api", "--model", "./models/20250421-175358-dark-petrel.tar.gz", "--debug"]
