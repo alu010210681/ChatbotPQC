@@ -1,14 +1,14 @@
-# Usa una imagen base de Python
-FROM python:3.10-slim
+# Paso 1: Usar una imagen base oficial de Rasa
+FROM rasa/rasa:2.8.0-full
 
-# Establecer el directorio de trabajo dentro del contenedor
+# Paso 2: Establecer el directorio de trabajo
 WORKDIR /app
 
-# Copiar los archivos de tu proyecto al contenedor
+# Paso 3: Copiar los archivos del proyecto Rasa
 COPY . /app
 
-# Instalar las dependencias necesarias
-RUN pip install --no-cache-dir -r requirements.txt
+# Paso 5: Exponer el puerto
+EXPOSE 5005
 
 # Instalar Rasa si no está en el requirements.txt
 RUN pip install rasa
@@ -16,9 +16,7 @@ RUN pip install rasa
 # Entrenamos el modelo de Rasa durante la construcción del contenedor
 RUN rasa train
 
-# Expone el puerto para la API de Rasa si es necesario
-EXPOSE 5005
+# Paso 6: Iniciar el servidor Rasa
 
 ENTRYPOINT ["rasa"]
-
-CMD ["run", "--cors", "*", "--enable-api", "--model", "./models", "--port", "5005", "--debug"]
+CMD ["run", "--cors", "*", "--enable-api", "--model", "./models/20250421-175358-dark-petrel.tar.gz", "--debug"]
